@@ -1,3 +1,12 @@
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
+
 local opts = {noremap = true, silent =  true }
 
 local term_opt = { silent = true }
@@ -7,12 +16,12 @@ local keymap = vim.keymap.set
 keymap("n", "<C-S>" ,":vsp<CR>" , opts)
 keymap("n", "<C-a>" ,":sp<CR>" , opts)
 
-
 -- window command for navigations
 keymap("n", "<C-h>" ,"<C-w>h" , opts)
 keymap("n", "<C-j>" ,"<C-w>j" , opts)
 keymap("n", "<C-k>" ,"<C-w>j" , opts)
 keymap("n", "<C-l>" ,"<C-w>l" , opts)
+
 
 -- enter to insert new line
 keymap("n", "<Enter>", "o<ESC>", opts)
