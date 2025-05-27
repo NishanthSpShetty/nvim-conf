@@ -1,4 +1,4 @@
-local opts = {noremap = true, silent =  true }
+local opts = { noremap = true, silent = true }
 
 local term_opt = { silent = true }
 
@@ -19,3 +19,7 @@ keymap('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 keymap("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>nf", ":NvimTreeFindFile<CR>", opts)
 keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+
+-- vim fugive
+keymap("n", "<leader>gc", ":GCheckout<CR>", opts)
+keymap("n", "<leader>gs", ":G<CR>", opts)

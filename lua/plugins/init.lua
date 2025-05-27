@@ -4,5 +4,5 @@ return {
     { "rebelot/kanagawa.nvim" },
     { "EdenEast/nightfox.nvim" },
     { "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false,    build = ":TSUpdate" },
-
+    { "tpope/vim-fugitive" },
 }

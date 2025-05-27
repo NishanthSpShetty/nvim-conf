@@ -73,11 +73,12 @@ return {
 
                     -- Rename the variable under your cursor.
                     --  Most Language Servers support renaming across files, etc.
-                    map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+                    -- map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+
 
                     -- Execute a code action, usually your cursor needs to be on top of an error
                     -- or a suggestion from your LSP for this to activate.
-                    map('<space>ca', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
+                    --                    map('<space>ca', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
 
                     -- Find references for the word under your cursor.
                     map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
@@ -107,6 +108,17 @@ return {
                     --  Useful when you're not sure what type a variable is and you want to see
                     --  the definition of its *type*, not where it was *defined*.
                     map('gt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
+
+
+                    map('U', ':Lspsaga hover_doc<CR>', 'Hover definition')
+                    map('<leader>rn', '<cmd>Lspsaga rename<CR>', 'Rename')
+                    map('<leader>o', '<cmd>Lspsaga outline<CR>', 'Outline')
+                    map('<space>ca', '<cmd>Lspsaga code_action<CR>', '[G]oto Code [A]ction', { 'n', 'x' })
+                    map('<space>lr', '<cmd>Lspsaga finder ref<CR>', 'References')
+                    map('<space>ld', '<cmd>Lspsaga finder def<CR>', 'Definition')
+                    map('<space>d', '<cmd>Lspsaga show_buf_diagnostics<CR>', 'Definition')
+                    map('[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', 'Definition')
+                    map(']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', 'Definition')
 
 
                     if client:supports_method('textDocument/documentHighlight') then
