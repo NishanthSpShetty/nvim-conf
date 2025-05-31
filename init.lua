@@ -54,3 +54,6 @@ local function open_nvim_tree()
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
+require("dap-python").setup("python3")
+require('dap-go').setup()

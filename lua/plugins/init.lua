@@ -5,4 +5,6 @@ return {
     { "EdenEast/nightfox.nvim" },
     { "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false,    build = ":TSUpdate" },
     { "tpope/vim-fugitive" },
+    { "mfussenegger/nvim-jdtls" },
+    { 'mfussenegger/nvim-dap' },
 }
