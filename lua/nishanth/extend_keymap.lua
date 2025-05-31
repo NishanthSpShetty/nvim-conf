@@ -5,9 +5,12 @@ local term_opt = { silent = true }
 local keymap = vim.keymap.set
 
 local builtin = require('telescope.builtin')
+local find_files = function()
+    builtin.find_files({ layout_strategy = 'vertical', layout_config = { width = 0.7 } })
+end
 
 keymap('n', '<C-p>', builtin.find_files, { desc = 'Telescope find files' })
-keymap('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+keymap('n', '<C-f>', find_files, { desc = 'Telescope find files' })
 
 
 keymap('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = 'Telescope current buffer fuzzy find' })
