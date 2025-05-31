@@ -60,3 +60,12 @@ require("dap-python").setup("python3")
 
 -- if using nvim-java require('java').setup()
 require('dap-go').setup()
+
+
+require('telescope').setup {
+    pickers = {
+        find_files = {
+            theme = "dropdown",
+        }
+    },
+}
