@@ -23,3 +23,7 @@ keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 -- vim fugive
 keymap("n", "<leader>gc", ":GCheckout<CR>", opts)
 keymap("n", "<leader>gs", ":G<CR>", opts)
+
+
+keymap("n", "<leader>jt", require('jdtls').test_class, opts)
+keymap("n", "<leader>jnt", require('jdtls').test_nearest_method, opts)

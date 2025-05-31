@@ -6,5 +6,14 @@ return {
     { "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false,    build = ":TSUpdate" },
     { "tpope/vim-fugitive" },
     { "mfussenegger/nvim-jdtls" },
+    --{
+    --    'nvim-java/nvim-java',
+
+    --    config = function()
+    --        require('java').setup()
+    --    end,
+    --},
     { 'mfussenegger/nvim-dap' },
+    -- Jumps to the last exited location in files.
+    { "farmergreg/vim-lastplace" },
 }

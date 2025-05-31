@@ -5,7 +5,7 @@ return {
         lazy = true,
         keys = {
             {
-                "<leader>db",
+                "<leader>b",
                 function() require("dap").toggle_breakpoint() end,
                 desc = "Toggle Breakpoint"
             },
@@ -68,6 +68,7 @@ return {
                 exclude = {
                     "delve",
                     "python",
+                    "java",
                 },
             },
             -- DAP servers: Mason will be invoked to install these if necessary.
@@ -138,18 +139,17 @@ return {
             },
         },
     },
-
-    -----------------------------------------------------------------------------------------------------
-    -- Rust dap configration
-    -----------------------------------------------------------------------------------------------------
     {
         -- Automatically sets up LSP, so lsp.lua doesn't include rust.
         -- Makes debugging work seamlessly.
         "mrcjkb/rustaceanvim",
-        version = '^5', -- Recommended by module.
+        version = '^6', -- Recommended by module.
+        lazy = false,
         ft = "rust",
         dependencies = {
             "mfussenegger/nvim-dap",
         },
     },
+
+
 }

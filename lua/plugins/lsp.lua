@@ -25,7 +25,8 @@ return {
                 ocamllsp = {},
                 zls = {},
                 julials = {},
-                rust_analyzer = {},
+                -- if using nvim-java                jdtls = {},
+                --                rust_analyzer = {},
 
             }
         },

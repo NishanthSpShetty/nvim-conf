@@ -42,6 +42,7 @@ vim.diagnostic.config({
 
 
 require "nishanth.treesitter"
+require "nishanth.dap"
 
 require('lualine').setup {}
 
@@ -56,4 +57,6 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 require("dap-python").setup("python3")
+
+-- if using nvim-java require('java').setup()
 require('dap-go').setup()
