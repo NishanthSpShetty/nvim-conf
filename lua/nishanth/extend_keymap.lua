@@ -6,7 +6,7 @@ local keymap = vim.keymap.set
 
 local builtin = require('telescope.builtin')
 local find_files = function()
-    builtin.find_files({ layout_strategy = 'vertical', layout_config = { width = 0.7 } })
+    builtin.find_files({ path_display = { 'shorten' }, layout_strategy = 'vertical', layout_config = { width = 0.6 } })
 end
 
 keymap('n', '<C-p>', builtin.find_files, { desc = 'Telescope find files' })
