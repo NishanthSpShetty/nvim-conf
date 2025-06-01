@@ -13,8 +13,6 @@ return {
             {
                 "<leader>dc",
                 function()
-                    -- close nvim tree when opening debugger view
-                    require("nvim-tree.api").tree.close()
                     require("dap").continue()
                 end,
                 desc = "Continue"
@@ -22,10 +20,7 @@ return {
 
             {
                 "<F5>",
-
                 function()
-                    -- close nvim tree when opening debugger view
-                    require("nvim-tree.api").tree.close()
                     require("dap").continue()
                 end,
                 desc = "Continue"
@@ -51,7 +46,9 @@ return {
 
             {
                 "<leader>dT",
-                function() require("dap").terminate() end,
+                function()
+                    require("dap").terminate()
+                end,
                 desc = "Terminate"
             },
         },
@@ -139,17 +136,5 @@ return {
             },
         },
     },
-    {
-        -- Automatically sets up LSP, so lsp.lua doesn't include rust.
-        -- Makes debugging work seamlessly.
-        "mrcjkb/rustaceanvim",
-        version = '^6', -- Recommended by module.
-        lazy = false,
-        ft = "rust",
-        dependencies = {
-            "mfussenegger/nvim-dap",
-        },
-    },
-
 
 }

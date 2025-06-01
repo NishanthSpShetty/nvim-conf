@@ -43,11 +43,11 @@ vim.diagnostic.config({
 
 require "nishanth.treesitter"
 require "nishanth.dap"
+require "nishanth.neotest"
 
 require('lualine').setup {}
 
 --
-require "nishanth.extend_keymap"
 
 local function open_nvim_tree()
     -- open the tree
@@ -60,3 +60,7 @@ require("dap-python").setup("python3")
 
 -- if using nvim-java require('java').setup()
 require('dap-go').setup()
+
+
+
+require "nishanth.extend_keymap"

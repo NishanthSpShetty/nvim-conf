@@ -52,3 +52,28 @@ dap.configurations.rust = dap.configurations.cpp
 
 vim.fn.sign_define("DapBreakpoint", { text = "⬢", texthl = "Yellow", linehl = "", numhl = "Yellow" })
 vim.fn.sign_define("DapStopped", { text = "▶", texthl = "Green", linehl = "ColorColumn", numhl = "Green" })
+
+local ui = require('dapui')
+
+-- close nvim tree on dap UI open and open nvmtree on dap-ui close
+dap.listeners.before.attach.dapui_config = function()
+    require("nvim-tree.api").tree.close()
+    ui.open()
+end
+
+dap.listeners.before.launch.dapui_config = function()
+    require("nvim-tree.api").tree.close()
+    ui.open()
+end
+
+dap.listeners.before.event_terminated.dapui_config = function()
+    ui.close()
+    require("nvim-tree.api").tree.toggle(false, true)
+end
+
+dap.listeners.before.event_exited.dapui_config = function()
+    ui.close()
+    -- open it but dont keep the focus on the TreeView
+    require("nvim-tree.api").tree.toggle(false, true)
+    --require("nvim-tree.api").tree.open({ focus = false })
+end

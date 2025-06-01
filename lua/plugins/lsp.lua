@@ -14,6 +14,7 @@ return {
                 },
             },
             { 'saghen/blink.cmp' },
+
         },
         opts = {
             servers = {
@@ -25,10 +26,10 @@ return {
                 ocamllsp = {},
                 zls = {},
                 julials = {},
-                -- if using nvim-java                jdtls = {},
-                --                rust_analyzer = {},
+                rust_analyzer = {},
 
             }
+            -- if using nvim-java                jdtls = -- {},
         },
         config = function(_, opts)
             local lspconfig = require('lspconfig')

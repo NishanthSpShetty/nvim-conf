@@ -30,3 +30,13 @@ keymap("n", "<leader>gs", ":G<CR>", opts)
 
 keymap("n", "<leader>jt", require('jdtls').test_class, opts)
 keymap("n", "<leader>jnt", require('jdtls').test_nearest_method, opts)
+
+
+local neotest_runner = require("neotest").run
+
+local neo_debug = function()
+    neotest_runner.run({ strategy = "dap" })
+end
+
+keymap("n", "<leader>nt", neotest_runner.run, opts)
+keymap("n", "<leader>nd", neo_debug, opts)
