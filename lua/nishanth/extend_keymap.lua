@@ -40,3 +40,5 @@ end
 
 keymap("n", "<leader>nt", neotest_runner.run, opts)
 keymap("n", "<leader>nd", neo_debug, opts)
+
+keymap("n", "<leader>gr", ":GoRun<CR>", opts)
