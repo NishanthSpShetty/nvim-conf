@@ -16,4 +16,5 @@ return {
     { 'mfussenegger/nvim-dap' },
     -- Jumps to the last exited location in files.
     { "farmergreg/vim-lastplace" },
+
 }

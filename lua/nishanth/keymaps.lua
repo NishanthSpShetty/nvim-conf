@@ -7,20 +7,20 @@
 --   command_mode = "c",
 
 
-local opts = {noremap = true, silent =  true }
+local opts = { noremap = true, silent = true }
 
 local term_opt = { silent = true }
 
 local keymap = vim.keymap.set
 
-keymap("n", "<C-S>" ,":vsp<CR>" , opts)
-keymap("n", "<C-a>" ,":sp<CR>" , opts)
+keymap("n", "<C-S>", ":vsp<CR>", opts)
+keymap("n", "<C-a>", ":sp<CR>", opts)
 
 -- window command for navigations
-keymap("n", "<C-h>" ,"<C-w>h" , opts)
-keymap("n", "<C-j>" ,"<C-w>j" , opts)
-keymap("n", "<C-k>" ,"<C-w>j" , opts)
-keymap("n", "<C-l>" ,"<C-w>l" , opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 
 -- enter to insert new line
@@ -51,5 +51,3 @@ keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 keymap("v", "p", '"_dP', opts)
-
-
