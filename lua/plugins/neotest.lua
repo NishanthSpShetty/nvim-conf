@@ -9,7 +9,7 @@ return {
             "nvim-neotest/neotest-go",
             "rouge8/neotest-rust",
             "nvim-neotest/neotest-vim-test",
-            "rcasia/neotest-java",
+            "NishanthSpShetty/neotest-java",
             "lawrence-laz/neotest-zig",
         }
     }
