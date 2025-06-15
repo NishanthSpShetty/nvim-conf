@@ -4,6 +4,7 @@ local keymap = vim.keymap.set
 
 keymap("n", "<leader>jt", require('jdtls').test_class, opts)
 keymap("n", "<leader>jnt", require('jdtls').test_nearest_method, opts)
+keymap("n", "<leader>nd", require('jdtls').test_nearest_method, opts)
 -- keymap("n", "<F5>", require('jdtls').test_nearest_method, opts)
 
 
