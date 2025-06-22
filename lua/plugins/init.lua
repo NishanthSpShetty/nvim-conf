@@ -1,9 +1,9 @@
 return {
-    { "ellisonleao/gruvbox.nvim",            priority = 1000,   config = true,   opts = ... },
-    { "folke/tokyonight.nvim",               lazy = false,      priority = 1000, opts = {} },
+    { "ellisonleao/gruvbox.nvim",        priority = 1000,   config = true,   opts = ... },
+    { "folke/tokyonight.nvim",           lazy = false,      priority = 1000, opts = {} },
     { "rebelot/kanagawa.nvim" },
     --colorscheme { "EdenEast/nightfox.nvim" },
-    { "nvim-treesitter/nvim-treesitter",     branch = 'master', lazy = false,    build = ":TSUpdate" },
+    { "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false,    build = ":TSUpdate" },
     { "tpope/vim-fugitive" },
     { "mfussenegger/nvim-jdtls" },
     --{
@@ -16,6 +16,6 @@ return {
     { 'mfussenegger/nvim-dap' },
     -- Jumps to the last exited location in files.
     { "farmergreg/vim-lastplace" },
-    { dir = "~/programs/nplugs/stackmap.nvim", dev = true }
+    --    { dir = "~/programs/nplugs/stackmap.nvim", dev = true }
 
 }

@@ -51,3 +51,5 @@ keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 keymap("v", "p", '"_dP', opts)
+keymap("n", "<leader><leader>x", ':source %<CR>', opts)
+keymap("n", "<leader><leader>t", '<Plug>PlenaryTestFile', opts)
