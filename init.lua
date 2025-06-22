@@ -44,6 +44,7 @@ vim.diagnostic.config({
 require "nishanth.treesitter"
 require "nishanth.dap"
 require "nishanth.neotest"
+require "nishanth.globals"
 
 require('lualine').setup {}
 
