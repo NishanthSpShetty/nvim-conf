@@ -35,6 +35,9 @@ local options = {
     pumheight = 10,
 
     laststatus = 2,
+    cursorline = true,
+
+    relativenumber = true,
 }
 
 for k, v in pairs(options) do
