@@ -1,8 +1,8 @@
 return {
-    { "ellisonleao/gruvbox.nvim",        priority = 1000,   config = true,   opts = ... },
-    { "folke/tokyonight.nvim",           lazy = false,      priority = 1000, opts = {} },
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true,   opts = ... },
+    { "folke/tokyonight.nvim",    lazy = false,    priority = 1000, opts = {} },
     --colorscheme { "EdenEast/nightfox.nvim" },
-    { "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false,    build = ":TSUpdate" },
+    --    { "nvim-treesitter/nvim-treesitter", branch = 'main', lazy = false,    build = ":TSUpdate" },
     { "tpope/vim-fugitive" },
     { "mfussenegger/nvim-jdtls" },
     --{

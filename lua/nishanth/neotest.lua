@@ -7,7 +7,9 @@ require("neotest").setup({
     },
     adapters = {
         require("neotest-rust"), -- needs to run cargo install cargo-nexttest
-        require("neotest-go"),
+        require("neotest-golang")({
+            runner = "gotestsum",
+        }),
         require("neotest-java")({
             -- config here
         }),
