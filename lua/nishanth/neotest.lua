@@ -13,9 +13,9 @@ require("neotest").setup({
         require("neotest-java")({
             -- config here
         }),
-        require("neotest-vim-test")({
-            ignore_file_types = { "python", "vim", "lua", "rust", "go", "java" },
-        }),
+        -- require("neotest-vim-test")({
+        --     ignore_file_types = { "python", "vim", "lua", "rust", "go", "java" },
+        -- }),
         require("neotest-zig")({
             dap = {
                 adapter = "lldb",

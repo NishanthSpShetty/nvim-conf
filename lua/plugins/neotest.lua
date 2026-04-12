@@ -8,7 +8,7 @@ return {
             "nvim-treesitter/nvim-treesitter",
             "fredrikaverpil/neotest-golang",
             "rouge8/neotest-rust",
-            "nvim-neotest/neotest-vim-test",
+            --            "nvim-neotest/neotest-vim-test",
             "NishanthSpShetty/neotest-java",
             "lawrence-laz/neotest-zig",
         }

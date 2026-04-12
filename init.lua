@@ -47,7 +47,7 @@ require "nishanth.neotest"
 require "nishanth.globals"
 
 require('lualine').setup {}
-
+require('go').setup()
 --
 
 local function open_nvim_tree()
@@ -65,3 +65,4 @@ require('dap-go').setup()
 
 
 require "nishanth.extend_keymap"
+require 'nishanth.neotree'

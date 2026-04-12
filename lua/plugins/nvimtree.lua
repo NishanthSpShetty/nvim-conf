@@ -9,16 +9,29 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     end
 })
 
--- NvimTreeCollapse
+---- NvimTreeCollapse
+--return {
+--    "nvim-tree/nvim-tree.lua",
+--    version = "*",
+--    lazy = false,
+--    dependencies = {
+--        "nvim-tree/nvim-web-devicons",
+--    },
+--    config = function()
+--        require("nvim-tree").setup {
+--        }
+--    end,
+--}
+
 return {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     dependencies = {
-        "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
-    config = function()
-        require("nvim-tree").setup {
-        }
-    end,
+    lazy = false, -- neo-tree will lazily load itself
+  }
 }

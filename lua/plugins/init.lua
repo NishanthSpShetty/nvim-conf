@@ -1,8 +1,8 @@
 return {
-    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true,   opts = ... },
-    { "folke/tokyonight.nvim",    lazy = false,    priority = 1000, opts = {} },
+    { "ellisonleao/gruvbox.nvim",        priority = 1000, config = true,      opts = ... },
+    { "folke/tokyonight.nvim",           lazy = false,    priority = 1000,    opts = {} },
     --colorscheme { "EdenEast/nightfox.nvim" },
-    --    { "nvim-treesitter/nvim-treesitter", branch = 'main', lazy = false,    build = ":TSUpdate" },
+    { "nvim-treesitter/nvim-treesitter", branch='main', lazy = false,    build = ":TSUpdate" },
     { "tpope/vim-fugitive" },
     { "mfussenegger/nvim-jdtls" },
     --{
@@ -17,4 +17,16 @@ return {
     { "farmergreg/vim-lastplace" },
     --    { dir = "~/programs/nplugs/stackmap.nvim", dev = true }
 
+    {
+        'kiddos/gemini.nvim',
+        opts = {}
+    },
+    { 's1n7ax/nvim-window-picker',
+    name = 'window-picker',
+    event = 'VeryLazy',
+    version = '2.*',
+    config = function()
+       -- require'window-picker'.setup()
+    end,
+}
 }

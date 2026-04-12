@@ -58,7 +58,7 @@ return {
                             group = augroup,
                             buffer = event.buf,
                             callback = function()
-                                vim.lsp.buf.format({ bufnr = event.buf, id = client.id, timeout_ms = 1000 })
+                                --    vim.lsp.buf.format({ bufnr = event.buf, id = client.id, timeout_ms = 1000 })
                             end,
                         })
                     end
@@ -78,7 +78,7 @@ return {
 
                     -- Execute a code action, usually your cursor needs to be on top of an error
                     -- or a suggestion from your LSP for this to activate.
-                    --                    map('<space>ca', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
+                    map('<space>ca', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
 
                     -- Find references for the word under your cursor.
                     map('gr', function()
@@ -112,6 +112,7 @@ return {
                     map('gt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
 
 
+                    map('sf', vim.lsp.buf.format, 'Format the buffer')
                     map('U', ':Lspsaga hover_doc<CR>', 'Hover definition')
                     map('<leader>rn', '<cmd>Lspsaga rename<CR>', 'Rename')
                     map('<leader>o', '<cmd>Lspsaga outline<CR>', 'Outline')

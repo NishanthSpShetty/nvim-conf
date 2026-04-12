@@ -19,9 +19,8 @@ keymap('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 keymap('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 keymap('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
-keymap("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>nf", ":NvimTreeFindFile<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+keymap("n", "<leader>t", ":Neotree toggle<CR>", opts)
+keymap("n", "<leader>nf", ":Neotree reveal<CR>", opts)
 
 -- vim fugive
 keymap("n", "<leader>gc", ":GCheckout<CR>", opts)
