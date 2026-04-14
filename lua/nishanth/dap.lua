@@ -57,23 +57,26 @@ local ui = require('dapui')
 
 -- close nvim tree on dap UI open and open nvmtree on dap-ui close
 dap.listeners.before.attach.dapui_config = function()
-    require("nvim-tree.api").tree.close()
+      require("neo-tree.command").execute({ action = "close" })
     ui.open()
 end
 
 dap.listeners.before.launch.dapui_config = function()
-    require("nvim-tree.api").tree.close()
+
+      require("neo-tree.command").execute({ action = "close" })
     ui.open()
 end
 
 dap.listeners.before.event_terminated.dapui_config = function()
     ui.close()
-    require("nvim-tree.api").tree.toggle(false, true)
+
+      require("neo-tree.command").execute({ action = "close" })
 end
 
 dap.listeners.before.event_exited.dapui_config = function()
     ui.close()
     -- open it but dont keep the focus on the TreeView
-    require("nvim-tree.api").tree.toggle(false, true)
+    --
+    require("neo-tree.command").execute({ action = "close" })
     --require("nvim-tree.api").tree.open({ focus = false })
 end

@@ -58,13 +58,11 @@ return {
                             group = augroup,
                             buffer = event.buf,
                             callback = function()
-                                --    vim.lsp.buf.format({ bufnr = event.buf, id = client.id, timeout_ms = 1000 })
+                                vim.lsp.buf.format()
+
                             end,
                         })
                     end
-
-
-
 
                     local map = function(keys, func, desc, mode)
                         mode = mode or 'n'
@@ -114,7 +112,7 @@ return {
 
                     map('sf', vim.lsp.buf.format, 'Format the buffer')
                     map('U', ':Lspsaga hover_doc<CR>', 'Hover definition')
-                    map('<leader>rn', '<cmd>Lspsaga rename<CR>', 'Rename')
+                    map('<leader>rn', require('live-rename').rename, 'Rename')
                     map('<leader>o', '<cmd>Lspsaga outline<CR>', 'Outline')
                     map('<space>ca', '<cmd>Lspsaga code_action<CR>', '[G]oto Code [A]ction', { 'n', 'x' })
                     map('<space>lr', '<cmd>Lspsaga finder ref<CR>', 'References')

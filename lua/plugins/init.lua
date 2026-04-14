@@ -18,15 +18,13 @@ return {
     --    { dir = "~/programs/nplugs/stackmap.nvim", dev = true }
 
     {
-        'kiddos/gemini.nvim',
-        opts = {}
-    },
-    { 's1n7ax/nvim-window-picker',
-    name = 'window-picker',
-    event = 'VeryLazy',
-    version = '2.*',
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy",
+    priority = 1000,
     config = function()
-       -- require'window-picker'.setup()
+        require("tiny-inline-diagnostic").setup()
+        vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
     end,
-}
+},
+{ "saecki/live-rename.nvim" }
 }
